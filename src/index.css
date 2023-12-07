@@ -1,0 +1,112 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Card Style for Quiz */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Question Styles */
+.question {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+/* Option Button Styles */
+.option-button {
+  background-color: #5D93E1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.option-button:hover {
+  background-color: #3e70cc;
+}
+
+/* Score Display */
+.score {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+      width: 95%;
+  }
+
+  .option-button {
+      padding: 15px 20px;
+  }
+}
+
+
+.cute-message {
+  font-size: 1.5em;
+  color: #4a90e2;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e6f7ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  animation: pop-in 0.5s ease-out both;
+}
+
+@keyframes pop-in {
+  0% {
+      transform: scale(0);
+      opacity: 0;
+  }
+  80% {
+      transform: scale(1.1);
+  }
+  100% {
+      transform: scale(1);
+      opacity: 1;
+  }
+}
+
+
+.option-button.correct {
+  background-color: green;
+}
+
+.option-button.incorrect {
+  background-color: red;
+}
+
+/* Ensure other button styles are not overridden */
+.option-button:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
